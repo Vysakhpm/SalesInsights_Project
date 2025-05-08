@@ -1,10 +1,12 @@
-a Power BI dashboard to understand AtliQ hardware goods sales trend. 
+A Power BI dashboard to understand AtliQ hardware goods sales trend. 
 ## Sales Insights Data Analysis Project
 
 
 Download `db_dump.sql` file to your local computer and import it 
+![Screenshot 2025-05-08 225950](https://github.com/user-attachments/assets/45c14ba5-4617-4197-8d88-ec4784b8e5aa)
 
 ### Data Analysis Using SQL
+![Screenshot 2025-05-08 225909](https://github.com/user-attachments/assets/f7ad7313-3857-4584-b7ef-1129701c2546)
 
 1. Show all customer records
 
@@ -47,6 +49,7 @@ Data Analysis Using Power BI
 ============================
 
 1. Formula to create norm_amount column
+![Screenshot 2025-05-08 225841](https://github.com/user-attachments/assets/5c51e9ca-aee6-45f2-bf1d-31be425fa1f2)
 
 `= Table.AddColumn(#"Filtered Rows", "norm_amount", each if [currency] = "USD" or [currency] ="USD#(cr)" then [sales_amount]*75 else [sales_amount], type any)`
 
